@@ -9,13 +9,13 @@
             font-family: 'Roboto', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background: linear-gradient(to bottom, #f4f4f9, #ffffff);
             color: #333;
             line-height: 1.8;
         }
 
         header {
-            background: #2C3E50;
+            background: linear-gradient(to right, #2C3E50, #4CAF50);
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -24,7 +24,7 @@
 
         header h1 {
             margin: 0;
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 700;
         }
 
@@ -39,7 +39,8 @@
             padding: 20px;
             background: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            border-radius: 10px;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         h2 {
@@ -48,12 +49,13 @@
             padding-bottom: 5px;
             margin-bottom: 15px;
             font-size: 1.8rem;
+            font-style: italic;
         }
 
         ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
         }
 
         ul li {
@@ -62,7 +64,7 @@
         }
 
         ul li strong {
-            color: #2C3E50;
+            color: #4CAF50;
         }
 
         footer {
@@ -71,11 +73,13 @@
             background: #2C3E50;
             color: #fff;
             margin-top: 30px;
+            font-size: 1.2rem;
         }
 
         a {
             color: #4CAF50;
             text-decoration: none;
+            font-weight: bold;
         }
 
         a:hover {
@@ -87,6 +91,30 @@
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 20px;
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .quote {
+            font-style: italic;
+            text-align: center;
+            margin: 20px 0;
+            color: #555;
+            font-size: 1.2rem;
+        }
+
+        .highlight {
+            background-color: #4CAF50;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
     </style>
 </head>
 <body>
@@ -97,8 +125,10 @@
     </header>
 
     <div class="container">
+        <div class="quote">"Empowering communities through technology and storytelling."</div>
+
         <h2>Personal Profile</h2>
-        <p>A visionary leader and digital innovator with expertise in multimedia production, frontend development, and storytelling. Passionate about transforming traditional media into accessible and engaging formats, I have a proven track record of empowering communities, preserving cultural heritage, and leading creative teams. I aim to explore cutting-edge digital media technologies and develop impactful solutions that bridge creativity and technology.</p>
+        <p>A visionary leader and digital innovator with expertise in <span class="highlight">multimedia production</span>, <span class="highlight">frontend development</span>, and <span class="highlight">storytelling</span>. Passionate about transforming traditional media into accessible and engaging formats, I have a proven track record of empowering communities, preserving cultural heritage, and leading creative teams. I aim to explore cutting-edge digital media technologies and develop impactful solutions that bridge creativity and technology.</p>
 
         <h2>Skills and Competencies</h2>
         <p><strong>Core Skills:</strong> Leadership, Creativity, Decision-Making, Problem Solving, Team Motivation, Planning, and Adaptability.</p>
